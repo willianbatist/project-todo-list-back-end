@@ -9,4 +9,3 @@ app.get('/user', (_req, res) => {
 });
 
 module.exports = app;
-
