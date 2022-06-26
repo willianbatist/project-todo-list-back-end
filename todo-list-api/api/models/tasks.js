@@ -6,7 +6,7 @@ const Tasks = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true,
     },
-    tasks: {
+    task: {
       type: DataTypes.STRING,
       allowNull: false,
     },
