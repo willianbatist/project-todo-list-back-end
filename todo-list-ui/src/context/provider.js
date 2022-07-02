@@ -12,9 +12,17 @@ export default function Provider({ children }) {
     }))
   };
 
+  const disableButton = (values) => {
+    if (values.task && values.task.length > 1) {
+      return false;
+    }
+    return true;
+  };
+
   const context = {
     handleValues,
     values,
+    disableButton,
   };
   return (
     <Context.Provider value={ context }>
