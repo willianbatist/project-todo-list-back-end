@@ -1,8 +1,9 @@
 const express = require("express");
 const Tasks = require("./controllers/tasks");
+const cors = require('cors');
 
 const app = express();
-
+app.use(cors())
 app.use(express.json());
 
 app.get('/tasks', Tasks.getTasks)
