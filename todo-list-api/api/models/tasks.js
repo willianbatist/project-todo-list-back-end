@@ -12,7 +12,6 @@ const Tasks = (sequelize, DataTypes) => {
     },
     created_date: {
       type: DataTypes.DATE,
-      allowNull: false,
     },
     status: {
       type: DataTypes.STRING,
