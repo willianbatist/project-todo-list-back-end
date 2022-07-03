@@ -20,7 +20,8 @@ const postTask = async (req, res) => {
 
 const deleteTask = async (req, res) => {
   try {
-    const task = await Tasks.deleteTask(req.body);
+    const { id } = req.params;
+    const task = await Tasks.deleteTask(id);
     return res.status(202).json(task);
   } catch (error) {
     return res.status(500).json({ message: error.message });

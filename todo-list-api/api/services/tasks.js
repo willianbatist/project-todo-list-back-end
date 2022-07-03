@@ -10,9 +10,9 @@ const postTask = async (body) => {
   return task;
 }
 
-const deleteTask = async (body) => {
+const deleteTask = async (id) => {
   const delTask = await Tasks.destroy({
-    where: { task: body.task },
+    where: { id: id },
   });
   return delTask;
 };
