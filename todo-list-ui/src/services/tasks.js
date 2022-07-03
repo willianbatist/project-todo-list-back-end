@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GETTASKS } from '../constants/index';
+import { GETTASKS, POSTTASK } from '../constants/index';
 
 function getTasks(setStates) {
   return axios.get(GETTASKS).then((res) => {
@@ -7,6 +7,11 @@ function getTasks(setStates) {
   });
 }
 
+function postTask(states) {
+  return axios.post(POSTTASK, states);
+}
+
 export {
   getTasks,
+  postTask,
 }

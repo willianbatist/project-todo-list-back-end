@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Context from './context/context';
-import { getTasks } from './services/tasks';
+import { getTasks, postTask } from './services/tasks';
 import './App.css';
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
         <button
           type="button"
           disabled={ disableButton(values) }
+          onClick={ postTask(values) }
         >Adicionar</button>
       {tasks.length && tasks.map((task, i) => (
         <div key={ i } className="tasks">
