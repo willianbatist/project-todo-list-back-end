@@ -18,7 +18,17 @@ const postTask = async (req, res) => {
   }
 }
 
+const deleteTask = async (req, res) => {
+  try {
+    const task = await Tasks.deleteTask(req.body);
+    return res.status(202).json(task);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   getTasks,
   postTask,
+  deleteTask,
 }
