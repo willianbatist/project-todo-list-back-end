@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Context from './context/context';
-import { getTasks, postTask } from './services/tasks';
+import { getTasks, postTask, deleteTask } from './services/tasks';
 import './App.css';
 
 function App() {
@@ -47,7 +47,14 @@ function App() {
               <option value="Concluído">Concluído</option>
             </select>
           </label>
-          <p>{ task.created_date.toLocaleString('pt-BR').slice(0, 19).replace('T', ' ') }</p>
+          <p>{ task.created_date.toLocaleString("pt-BR").slice(0, 19).replace("T", " " ) }</p>
+          <button 
+            type="button"
+            value={ task.task }
+            onClick={ (e) => deleteTask(e.target.value) }
+          >
+            Excluir
+          </button>
         </div>
       ))}
     </div>
