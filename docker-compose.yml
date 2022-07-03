@@ -27,6 +27,8 @@ services: # cada servico é um container
     platform: linux/x86_64
     ports:
       - 3000:3000
+    volumes:
+      - ./todo-list-ui:/app/front
 
     command: npm start
 
