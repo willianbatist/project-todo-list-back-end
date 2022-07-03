@@ -14,7 +14,6 @@ module.exports = {
       },
       created_date: { 
         type: Sequelize.DATE,
-        allowNull: false,
         defaultValue: Sequelize.fn('NOW')
      },
      status: {

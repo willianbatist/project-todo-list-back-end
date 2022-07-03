@@ -8,7 +8,10 @@ function getTasks(setStates) {
 }
 
 function postTask(states) {
-  return axios.post(POSTTASK, states);
+  axios.post(POSTTASK, {
+    task: states.task,
+    status: states.status,
+  }).then((res) => console.log(res));
 }
 
 export {

@@ -32,7 +32,7 @@ function App() {
         <button
           type="button"
           disabled={ disableButton(values) }
-          onClick={ postTask(values) }
+          onClick={ () => postTask(values) }
         >Adicionar</button>
       {tasks.length && tasks.map((task, i) => (
         <div key={ i } className="tasks">
