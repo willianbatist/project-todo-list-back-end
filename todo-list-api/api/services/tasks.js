@@ -10,7 +10,15 @@ const postTask = async (body) => {
   return task;
 }
 
+const deleteTask = async (body) => {
+  const delTask = await Tasks.destroy({
+    where: { task: body.task },
+  });
+  return delTask;
+};
+
 module.exports = {
   getTasks,
   postTask,
+  deleteTask,
 }
