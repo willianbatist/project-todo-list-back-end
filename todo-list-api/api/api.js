@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.get('/tasks', Tasks.getTasks)
 app.post('/task', Tasks.postTask)
+app.delete('/task', Tasks.deleteTask)
 app.get('/user', (_req, res) => {
   return res.status(200).json({ name: "WIllian" })
 });
