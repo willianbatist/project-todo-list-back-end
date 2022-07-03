@@ -50,7 +50,7 @@ function App() {
           <p>{ task.created_date.toLocaleString("pt-BR").slice(0, 19).replace("T", " " ) }</p>
           <button 
             type="button"
-            value={ task.task }
+            value={ task.id }
             onClick={ (e) => deleteTask(e.target.value) }
           >
             Excluir
