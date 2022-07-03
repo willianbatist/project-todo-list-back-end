@@ -9,6 +9,16 @@ const getTasks = async (_req, res) => {
   }
 };  
 
+const postTask = async (req, res) => {
+  try {
+    const task = await Tasks.postTask(req.body);
+    return res.status(201).json(task);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+}
+
 module.exports = {
-  getTasks
+  getTasks,
+  postTask,
 }
