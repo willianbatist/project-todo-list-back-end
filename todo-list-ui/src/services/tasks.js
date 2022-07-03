@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GETTASKS, POSTTASK, DELETETASK } from '../constants/index';
+import { GETTASKS, POSTTASK } from '../constants/index';
 
 const getTasks = (setStates) => {
   return axios.get(GETTASKS).then((res) => {
@@ -14,10 +14,8 @@ const postTask = (states) => {
   }).then((res) => console.log(res));
 }
 
-const deleteTask = (task) => {
-  axios.delete(DELETETASK, {
-    task
-  }).then((res) => console.log(res));
+const deleteTask = (id) => {
+  axios.delete(`http://localhost:8080/task/${id}`).then((res) => console.log(res));
 }
 
 export {
