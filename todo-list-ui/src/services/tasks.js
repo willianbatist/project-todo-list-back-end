@@ -20,8 +20,17 @@ const deleteTask = (id) => {
   return window.location.reload();
 }
 
+const putTask = (id, task, status ) => {
+  axios.put(`http://localhost:8080/task/${id}`, {
+    task: task,
+    status: status,
+  }).then((res) => console.log(res));
+  return window.location.reload();
+}
+
 export {
   getTasks,
   postTask,
   deleteTask,
+  putTask,
 }

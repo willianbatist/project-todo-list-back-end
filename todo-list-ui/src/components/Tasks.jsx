@@ -1,9 +1,11 @@
 import React, { useEffect, useContext } from 'react';
 import { deleteTask } from '../services/tasks';
 import Context from '../context/context';
+import HandleEdit from '../hooks/HandleEdit';
+
 
 function Tasks() {
-  const { tasks, handleTasks } = useContext(Context);
+  const { tasks, handleTasks, handleId, id } = useContext(Context);
 
   useEffect(() => {
     handleTasks();
@@ -14,7 +16,7 @@ function Tasks() {
       {tasks && tasks.map((task, i) => (
         <div key={ i } className="tasks">
           <h3>{ task.task }</h3>
-          <p>{ task.status }</p>
+          { HandleEdit(task, id) }
           <p>{ task.created_date.toLocaleString("pt-BR").slice(0, 19).replace("T", " " ) }</p>
           <button 
             type="button"
@@ -23,7 +25,13 @@ function Tasks() {
           >
             Excluir
           </button>
-          <button>Editar</button>
+          <button
+            onClick={ () => {
+              handleId(task.id);
+            } }
+          >
+            Editar
+          </button>
         </div>
       ))}
     </div>
