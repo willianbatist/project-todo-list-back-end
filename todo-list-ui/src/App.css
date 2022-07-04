@@ -1,3 +1,31 @@
 .App {
   text-align: center;
+  margin-top: 5%;
+}
+
+.input-header {
+  border: none;
+  border-bottom: 1px solid black;
+  height: 40px;
+}
+
+.select-header {
+  border: none;
+  border-bottom: 1px solid black;
+  height: 40px;
+}
+
+.label-header {
+  margin-left: 20px;
+}
+
+select:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.btn-header {
+  height: 40px;
+  border: none;
+  background-color: #4CAF50;
 }
