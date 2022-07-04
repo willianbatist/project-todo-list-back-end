@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 export default function Provider({ children }) {
   const [values, setValues] = useState({ status: 'Pendente' });
   const [tasks, setTasks] = useState("");
+  const [id, setId] = useState(0);
 
   const handleValues = (value) => {
     setValues((prevValue) => ({
@@ -25,11 +26,17 @@ export default function Provider({ children }) {
     return true;
   };
 
+  const handleId = (id) => {
+    setId(id);
+  }
+
   const context = {
     handleValues,
     handleTasks,
+    handleId,
     values,
     tasks,
+    id,
     disableButton,
   };
   return (
