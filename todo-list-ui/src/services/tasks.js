@@ -12,10 +12,12 @@ const postTask = (states) => {
     task: states.task,
     status: states.status,
   }).then((res) => console.log(res));
+  return window.location.reload();
 }
 
 const deleteTask = (id) => {
   axios.delete(`http://localhost:8080/task/${id}`).then((res) => console.log(res));
+  return window.location.reload();
 }
 
 export {
