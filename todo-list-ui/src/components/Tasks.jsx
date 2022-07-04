@@ -10,7 +10,7 @@ function Tasks() {
   }, [])
 
   return(
-    <div>
+    <div className="task-container">
       {tasks && tasks.map((task, i) => (
         <div key={ i } className="tasks">
           <h3>{ task.task }</h3>

@@ -8,13 +8,19 @@ function Header() {
   return(
     <div>
        <h1>Todo List</h1>
-        <input 
+        <input
+          className="input-header" 
           type="text"
           name="task"
           onChange={ handleValues }
+          placeholder="Escrever Tarefa"
         />
-        <label>Status
+        <label className="label-header">
+            <span>
+              STATUS:
+            </span>
             <select
+              className="select-header"
               name='status'
               onChange={ handleValues }
             >
@@ -24,6 +30,7 @@ function Header() {
             </select>
           </label>
         <button
+          className="btn-header"
           type="button"
           disabled={ disableButton(values) }
           onClick={ () => postTask(values) }
