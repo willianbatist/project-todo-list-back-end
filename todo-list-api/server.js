@@ -8,3 +8,5 @@ app.get('/', (_request, response) => {
 });
 
 app.listen(port, () => console.log('ouvindo porta', port));
+
+module.exports = app;
