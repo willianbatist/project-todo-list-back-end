@@ -36,7 +36,7 @@ No terminal
 entre no diretorio
   - 2 cd project-todo-list-ebytr/
 
-Observação: para que o projeto funcione, é necessário se ter o Docker instalado.
+**Observação: para que o projeto funcione, é necessário se ter o Docker instalado.**
 
   - 3 ainda no terminal rode docker-compose up --build -d
 que irá criar 3 ambientes, o mysql, o app_frontend e app_backend
@@ -56,5 +56,18 @@ que irá criar 3 ambientes, o mysql, o app_frontend e app_backend
   
   link para a api do backend:
   http://localhost:8080/tasks
-  
+ 
+---
+
+ ### Para realizar os testes:
+ 
+ **Observação: Para realizar o teste no front-end é necessario que tenho uma tarefa adicionada na aplicação.**
+ 
+ Front-end testes:
+ É nescessario entrar no diretorio **todo-list-ui** feito isso só dá o comando npm test.
+ 
+Back-end testes:
+ É nescessario entrar no diretorio **todo-list-api** feito isso só dá o comando npm test.
+ 
+ 
 ---
