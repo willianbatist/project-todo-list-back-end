@@ -4,6 +4,7 @@ import Context from '../context/context';
 import HandleEdit from '../hooks/HandleEdit';
 
 
+
 function Tasks() {
   const { tasks, handleTasks, handleId, id } = useContext(Context);
 
@@ -14,7 +15,7 @@ function Tasks() {
   return(
     <div className="task-container">
       {tasks && tasks.map((task, i) => (
-        <div key={ i } className="tasks">
+        <div data-testid="element-tasks" key={ i } className="tasks">
           <h3>{ task.task }</h3>
           { HandleEdit(task, id) }
           <p>{ task.created_date.toLocaleString("pt-BR").slice(0, 19).replace("T", " " ) }</p>
