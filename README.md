@@ -31,23 +31,23 @@ O Projeto ToDo List Ebytr é uma aplicação web que tem como objetivo facilitar
 ### Inicialização
 
 No terminal
-  - 1 der um git clone git@github.com:willianbatist/project-todo-list-ebytr.git
+  - 1 - der um git clone git@github.com:willianbatist/project-todo-list-ebytr.git
 
 entre no diretorio
-  - 2 cd project-todo-list-ebytr/
+  - 2 - cd project-todo-list-ebytr/
 
 **Observação: para que o projeto funcione, é necessário se ter o Docker instalado.**
 
-  - 3 ainda no terminal rode docker-compose up --build -d
+  - 3 - ainda no terminal rode docker-compose up --build -d
 que irá criar 3 ambientes, o mysql, o app_frontend e app_backend
 
-  - 4 em seguida docker start app_backend app_frontend mysql_db
+  - 4 - em seguida docker start app_backend app_frontend mysql_db
 
-  - 5 docker exec app_backend npx sequelize db:create
+  - 5 - docker exec app_backend npx sequelize db:create
 
-  - 6 docker exec app_backend npx sequelize db:migrate
+  - 6 - docker exec app_backend npx sequelize db:migrate
 
-  - 7 docker exec app_backend npx sequelize db:seed:all
+  - 7 - docker exec app_backend npx sequelize db:seed:all
 
 ### Para acessar a aplicação
   
