@@ -25,7 +25,7 @@ Este repositório contem o **Projeto Todo List Ebyrt** que reúne o aprendizado 
 
 ## Apresentação do Projeto
 
-O Projeto ToDo List Ebytr é uma aplicação web que tem como objetivo facilitar a vida dos usuários. A ferramenta permite que sejam adicionadas tarefas diárias e compromissos, facilitando a gestão de tempo das pessoas. A lista de tarefas é ordenada por status classificados em “Pendente”, “Em andamento” e “Concluído”. A aplicação se trata de uma full stack onde o banco de dados usado é mysql, responsável por realizar as quatro operações básicas utilizadas em bases de dados relacionais, sendo elas a criação, a leitura, a utilização e a exclusão, esta última se comunica ao react e apresenta a interface ao usuário.
+O Projeto ToDo List Ebytr é uma aplicação web que tem como objetivo facilitar a vida dos usuários. A ferramenta permite que sejam adicionadas tarefas diárias e compromissos, facilitando a gestão de tempo dos usuarios. Criando uma lista de tarefas, que é ordenada por status classificados em “Pendente”, “Em andamento” e “Concluído”. É uma aplicação full stack, onde fui desenvolvido o front-end com react e no back-end foi criado uma api usando o Node.js.
 
 
 ### Inicialização
